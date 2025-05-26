@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("images/fond.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* espace pour le menu fixe */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* même fond que le header */
+    backdrop-filter: blur(15px); /* même effet flou */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    min-width: 160px;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: #fff; /* texte blanc comme le menu principal */
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+.dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* effet de survol similaire */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Pour le sous-menu dans le menu déroulant */
+.dropdown-content-sub {
+    display: none;
+    position: absolute;
+    left: 100%; /* position à droite */
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 1;
+}
+
+  /* Affiche le sous-menu au survol */
+.dropdown-submenu:hover .dropdown-content-sub {
+    display: block;
+}
+
+  /* Facultatif : ajustements esthétiques */
+.dropdown-submenu {
+    position: relative;
+}
+
+
+.btn{
+    width: 15%;
+    height: 30px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+.salle {
+    position: relative;
+    width: 1000px; /* adapte à ton image */
+  }
+  
+  .salle img {
+    width: 100%;
+    display: block;
+  }
+  
+  .pc-field {
+    position: absolute;
+    width: 58px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.9);
+  }
